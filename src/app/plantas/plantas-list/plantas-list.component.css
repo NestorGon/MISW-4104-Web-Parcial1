@@ -1,0 +1,13 @@
+* {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+th {
+  font-weight: 700;
+}
+
+#calculo-tipo p{
+  font-size: 20px;
+}

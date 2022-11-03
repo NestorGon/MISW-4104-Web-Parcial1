@@ -1,11 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlantasListComponent } from './plantas/plantas-list/plantas-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule
+      ],
       declarations: [
-        AppComponent
+        AppComponent,
+        PlantasListComponent
       ],
     }).compileComponents();
   });
@@ -26,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('parcial app is running!');
+    expect(compiled.querySelector('h1.pb-3')?.textContent).toContain('Vivero El Otoño');
   });
 });
